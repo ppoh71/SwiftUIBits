@@ -13,6 +13,8 @@
 		A974AA0D24E3172D00BAD331 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A974AA0C24E3172D00BAD331 /* Assets.xcassets */; };
 		A974AA1024E3172D00BAD331 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A974AA0F24E3172D00BAD331 /* Preview Assets.xcassets */; };
 		A974AA1324E3172D00BAD331 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A974AA1124E3172D00BAD331 /* LaunchScreen.storyboard */; };
+		A974AA1B24E31D6C00BAD331 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A974AA1A24E31D6C00BAD331 /* Colors.xcassets */; };
+		A974AA1D24E3291B00BAD331 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974AA1C24E3291B00BAD331 /* Components.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A974AA0F24E3172D00BAD331 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A974AA1224E3172D00BAD331 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A974AA1424E3172D00BAD331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A974AA1A24E31D6C00BAD331 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A974AA1C24E3291B00BAD331 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,9 @@
 				A974AA0624E3172A00BAD331 /* AppDelegate.swift */,
 				A974AA0824E3172A00BAD331 /* SceneDelegate.swift */,
 				A974AA0A24E3172A00BAD331 /* ContentView.swift */,
+				A974AA1C24E3291B00BAD331 /* Components.swift */,
 				A974AA0C24E3172D00BAD331 /* Assets.xcassets */,
+				A974AA1A24E31D6C00BAD331 /* Colors.xcassets */,
 				A974AA1124E3172D00BAD331 /* LaunchScreen.storyboard */,
 				A974AA1424E3172D00BAD331 /* Info.plist */,
 				A974AA0E24E3172D00BAD331 /* Preview Content */,
@@ -134,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A974AA1324E3172D00BAD331 /* LaunchScreen.storyboard in Resources */,
+				A974AA1B24E31D6C00BAD331 /* Colors.xcassets in Resources */,
 				A974AA1024E3172D00BAD331 /* Preview Assets.xcassets in Resources */,
 				A974AA0D24E3172D00BAD331 /* Assets.xcassets in Resources */,
 			);
@@ -147,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A974AA0724E3172A00BAD331 /* AppDelegate.swift in Sources */,
+				A974AA1D24E3291B00BAD331 /* Components.swift in Sources */,
 				A974AA0924E3172A00BAD331 /* SceneDelegate.swift in Sources */,
 				A974AA0B24E3172A00BAD331 /* ContentView.swift in Sources */,
 			);
