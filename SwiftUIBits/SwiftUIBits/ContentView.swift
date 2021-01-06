@@ -14,46 +14,36 @@ struct ContentView: View {
   @State private var activeToggle3: Bool = false
   
   var body: some View {
-    VStack(spacing: 60){
-      CustomToggle(active: $activeToggle1, knobRadius: 20, color: Color("ToggleOnMagenta"))
+    VStack(spacing: 20){
+      Spacer()
+      
+      Text("Custom Toggle")
+        .font(Font.system(size: 12, weight: .bold))
+        .foregroundColor(Color.gray)
+        .multilineTextAlignment(.leading)
+      
       CustomToggle(active: $activeToggle2, knobRadius: 60, color: Color("ToggleOnGreen"))
-      CustomToggle(active: $activeToggle3, knobRadius: 120, color: Color("ToggleOnYellow"))
+
+      
+      Spacer()
+      
+      Text("Scroll Slider")
+        .font(Font.system(size: 12, weight: .bold))
+        .foregroundColor(Color.gray)
+        .multilineTextAlignment(.leading)
+      
+      ScrollSlider()
+      
+      Spacer()
+      
     }
     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+    .background(Color.black)
     .edgesIgnoringSafeArea(.all)
   }
 }
 
-struct CustomToggle: View {
-  @Binding var active: Bool
-  var knobRadius: CGFloat
-  var color: Color
-  
-  var body: some View {
-    Button(action: {
-      self.active.toggle()
-    }) {
-      ZStack(alignment: self.active ? .trailing : .leading){
-        RoundedRectangle(cornerRadius: knobRadius/2)
-          .fill(Color.gray.opacity(0.3))
-          .frame(width: self.knobRadius*2, height: knobRadius)
-        
-        ZStack{
-          Circle()
-            .fill(self.active ? color : Color.gray)
-            .frame(width: knobRadius, height: knobRadius)
 
-          Circle()
-            .fill(self.active ? Color.white.opacity(0.7) : Color.white.opacity(0.5))
-            .blur(radius: knobRadius/10)
-            .frame(width: knobRadius/3, height: knobRadius/3)
-            .offset(x: knobRadius/4, y: -knobRadius/4)
-        }
-        .rotationEffect(.degrees(self.active ? 0 : -150))
-      }.animation(Animation.easeInOut(duration: 0.3))
-    }.buttonStyle(ButtonWithoutDefaultAnimation())
-  }
-}
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
