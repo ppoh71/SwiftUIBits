@@ -1,7 +1,7 @@
 # SwiftUIBits
 In this Repo/App I want to collect SwiftUI Experiments.
 Mostly small UI components I'm working on or using in my projects.
-Fell free to use, comment and also feedback is welcome.
+Feel free to use,share comment. Also feedback is welcome.
 
 Components so far:
 
