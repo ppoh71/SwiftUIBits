@@ -5,13 +5,11 @@ Feel free to use,share comment. Also feedback is welcome.
 
 Components so far:
 
-1. Custom Toggle
-
+## 1. Custom Toggle
 A very simple and easy to use custom toggle view.
 For everyone  who wants a bit more stlying options than the standard SwiftUI toggle view -> Toggle(isOn: $vibrateOnRing)
 
-2. ScrollSlider
-
+## 2. ScrollSlider
 This is a HStack as a slide controller made with ScrollView & ScrollViewReader.
 I like and use this in one of my projects.  
 
