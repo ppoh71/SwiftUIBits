@@ -21,15 +21,15 @@ struct ScrollSlider: View {
   var drag: some Gesture {
     DragGesture()
       .onChanged { _ in
-        self.isDragging = true
+        isDragging = true
       }
   }
   
   /// Set values on scrolling
   /// Also check when scrolling stopped
   /// - Parameter value: scroll position
-  func valueByScrolling(value: CGFloat) {
-    guard isDragging && value != position else {
+  func valueByScrolling(valuePosition: CGFloat) {
+    guard isDragging && valuePosition != position else {
       return
     }
     
@@ -37,14 +37,14 @@ struct ScrollSlider: View {
     /// gcd b/c Modifying state during view update
     DispatchQueue.main.async {
       /// get value for left/right scrolling 1/-1
-      let newValue: CGFloat = value > position ? 5 : -5
+      let newValue: CGFloat = valuePosition > position ? 5 : -5
       scrollExecute(value: Double(newValue))
       
-      /// set position value for next execution
-      position = value
+      /// set position value for next scroll execution
+      position = valuePosition
       
       /// when need call a function on stopped scrolling
-      checkForStoppedScrolling(checkPosition: value)
+      checkForStoppedScrolling(checkPosition: valuePosition)
     }
   }
   
@@ -58,16 +58,12 @@ struct ScrollSlider: View {
     }
   }
   
-  // MARK: Execute on scrolling
-  
   /// Execute on scrolling by type
   /// - Parameter value: value form scrolling
   func scrollExecute(value: Double) {
     rotationValue += value
     firstExecution = false
   }
-  
-  // MARK: Stop on scrolling
   
   /// Execute when scrolling stopped by type
   func stoppedScrollingExecute() {
@@ -87,8 +83,9 @@ struct ScrollSlider: View {
         ScrollView(Axis.Set.horizontal, showsIndicators: false) {
           ScrollViewReader { scrollValue in
             HStack(alignment: .bottom, spacing: 15) {
+              
               GeometryReader { innerGeo -> Text in
-                valueByScrolling(value: innerGeo.frame(in: .global).minX)
+                valueByScrolling(valuePosition: innerGeo.frame(in: .global).minX)
                 return Text("")
               }
               
@@ -125,7 +122,6 @@ struct ScrollSlider: View {
     }
   }
 }
-
 
 struct ScrollSlider_Previews: PreviewProvider {
   static var previews: some View {
