@@ -10,6 +10,7 @@
 		A9454FB525A63F0900ADEEB2 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9454FB425A63F0900ADEEB2 /* CustomToggle.swift */; };
 		A9454FB825A63F6C00ADEEB2 /* ScrollSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9454FB725A63F6C00ADEEB2 /* ScrollSlider.swift */; };
 		A9454FBC25A6402900ADEEB2 /* ObserverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9454FBB25A6402900ADEEB2 /* ObserverModel.swift */; };
+		A9454FC225A888E800ADEEB2 /* SlideBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9454FC125A888E800ADEEB2 /* SlideBars.swift */; };
 		A974AA0724E3172A00BAD331 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974AA0624E3172A00BAD331 /* AppDelegate.swift */; };
 		A974AA0924E3172A00BAD331 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974AA0824E3172A00BAD331 /* SceneDelegate.swift */; };
 		A974AA0B24E3172A00BAD331 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974AA0A24E3172A00BAD331 /* ContentView.swift */; };
@@ -24,6 +25,7 @@
 		A9454FB425A63F0900ADEEB2 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
 		A9454FB725A63F6C00ADEEB2 /* ScrollSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSlider.swift; sourceTree = "<group>"; };
 		A9454FBB25A6402900ADEEB2 /* ObserverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverModel.swift; sourceTree = "<group>"; };
+		A9454FC125A888E800ADEEB2 /* SlideBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideBars.swift; sourceTree = "<group>"; };
 		A974AA0324E3172A00BAD331 /* SwiftUIBits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A974AA0624E3172A00BAD331 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A974AA0824E3172A00BAD331 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 				A9454FB425A63F0900ADEEB2 /* CustomToggle.swift */,
 				A9454FB725A63F6C00ADEEB2 /* ScrollSlider.swift */,
 				A974AA1C24E3291B00BAD331 /* Components.swift */,
+				A9454FC125A888E800ADEEB2 /* SlideBars.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				A974AA0724E3172A00BAD331 /* AppDelegate.swift in Sources */,
 				A9454FB825A63F6C00ADEEB2 /* ScrollSlider.swift in Sources */,
 				A974AA1D24E3291B00BAD331 /* Components.swift in Sources */,
+				A9454FC225A888E800ADEEB2 /* SlideBars.swift in Sources */,
 				A9454FB525A63F0900ADEEB2 /* CustomToggle.swift in Sources */,
 				A9454FBC25A6402900ADEEB2 /* ObserverModel.swift in Sources */,
 				A974AA0924E3172A00BAD331 /* SceneDelegate.swift in Sources */,
