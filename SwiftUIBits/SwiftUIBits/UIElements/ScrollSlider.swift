@@ -72,10 +72,11 @@ struct ScrollSlider: View {
   var body: some View {
     VStack{
       
-      Image("arreaLogo")
+      Image(systemName: "cube")
         .resizable()
-        .frame(width: 200, height: 200, alignment: .center)
-        .rotation3DEffect(.degrees(rotationValue), axis: (x: 1, y: 1, z: 0))
+        .foregroundColor(.white)
+        .frame(width: 50, height: 50, alignment: .center)
+        .rotationEffect(.degrees(rotationValue))
       
       Spacer().frame(height: 20)
       
