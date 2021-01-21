@@ -60,7 +60,6 @@ struct ContentView: View {
           .frame(width: 50, height: 50, alignment: .center)
           .opacity(Double(slideBarValue))
           .scaleEffect(slideBarValue)
-        
         Spacer()
       }
       
