@@ -15,8 +15,8 @@ struct SlideBars: View {
   @State private var previousValue: Double?
   @State private var deltaValue: Double = 0
   
-  /// Based on the touch position we can figure out
-  /// which bar is active and what sliderValue we currently have.
+  /// Based on the touch position we can figure out a delta
+  /// to add/substract from the curretn value to get the sliding value effect.
   ///
   /// We know the height of the bars, the touch position so we can
   /// calculate all needed values based on that.
@@ -34,7 +34,7 @@ struct SlideBars: View {
     /// Sets also the slide speed per drag distance.
     deltaValue = (abs(value - _previousValue)/100)
     
-    /// Sets the sliderValue  depending on touch position and
+    /// Sets the sliderValue by the delta value depending on touch position and
     /// direction up/down by previous value
     if value < _previousValue {
       self.slideValue = slideValue >= maxValue ? maxValue : slideValue + deltaValue
@@ -50,7 +50,11 @@ struct SlideBars: View {
     initValue = CGFloat(self.slideValue)
   }
   
-  /// Set the color based on touch position
+  /// Set the color based the current sliderValue.
+  /// The amount of bars (10) is correponding to the maxValue 1 .
+  ///
+  /// We get the right bar by the id number of the bar divided by 100
+  /// to match the sliderValue ( 0 -1)
   ///
   /// - Parameters:
   ///   - index: bar index id
