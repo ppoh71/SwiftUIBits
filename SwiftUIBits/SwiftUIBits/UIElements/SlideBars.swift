@@ -32,6 +32,15 @@ struct SlideBars: View {
     
     /// Defines the delta to add/substract from sliderValue per touch.
     /// Sets also the slide speed per drag distance.
+    ///
+    /// Devide by 100 to match the maxVale 1. So the range goes from 0-1
+    /// for opacity or scale modifiers.
+    ///
+    /// More specific: the drag y postion is based on the bar height which id 10.
+    /// 10 bars = 100. We want the returning binding value to be from 0 - 1
+    /// so we devide by 100.
+    ///
+    /// This could be made more dymanic to match any desired return value.
     deltaValue = (abs(value - _previousValue)/100)
     
     /// Sets the sliderValue by the delta value depending on touch position and
