@@ -34,8 +34,8 @@ struct SlideBars: View {
     /// Sets also the slide speed per drag distance.
     deltaValue = (abs(value - _previousValue)/100)
     
-    /// sets the color for the bars
-    /// depending on touch direction up/down by previous value
+    /// Sets the sliderValue  depending on touch position and
+    /// direction up/down by previous value
     if value < _previousValue {
       self.slideValue = slideValue >= maxValue ? maxValue : slideValue + deltaValue
     } else {
