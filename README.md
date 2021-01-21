@@ -2,7 +2,7 @@
 In this Repo/App I want to collect some SwiftUI experiments & UI componemts I'm working on or using in my projects.
 Feel free to use, share & comment.
 
-![Image of Yaktocat](screenshot.png)
+![Screencast](screencast.mov)
 
 Components so far:
 
