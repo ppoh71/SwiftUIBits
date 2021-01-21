@@ -15,7 +15,13 @@ struct SlideBars: View {
   @State private var previousValue: Double?
   @State private var deltaValue: Double = 0
   
-  /// Called on drag
+  /// Based on the touch position we can figure out
+  /// which bar is active and what sliderValue we currently have.
+  ///
+  /// We know the height of the bars, the touch position so we can
+  /// calculate all needed values based on that.
+  ///
+  /// We also set a previous value to find out if we scroll up or down.
   ///
   /// - Parameter value: y position on drag
   func slideProcess(value: Double){
@@ -24,34 +30,44 @@ struct SlideBars: View {
       return
     }
     
-    /// sets also the slide speed per drag distance
+    /// Defines the delta to add/substract from sliderValue per touch.
+    /// Sets also the slide speed per drag distance.
     deltaValue = (abs(value - _previousValue)/100)
     
     /// sets the color for the bars
-    /// depending on touch direction
+    /// depending on touch direction up/down by previous value
     if value < _previousValue {
       self.slideValue = slideValue >= maxValue ? maxValue : slideValue + deltaValue
     } else {
       self.slideValue = slideValue >= 0 ? slideValue - deltaValue : 0
     }
     
-    /// set  as previous to get delta
-    /// on next cycle
+    /// Set as previous to get delta on next cycle
+    /// and scroll direction.
     previousValue = value
     
     /// assign to back binding valuie
     initValue = CGFloat(self.slideValue)
   }
   
+  /// Set the color based on touch position
+  ///
+  /// - Parameters:
+  ///   - index: bar index id
+  ///   - slideValue: current sliderValue / touch position
+  ///
+  /// - Returns: Bar color
   func valueColor(index: Double, slideValue: Double) -> Color{
     var color: Color = Color.yellow
-    color = slideValue >= Double(index/10) ?Color.yellow : Color.black.opacity(0.4)
+    color = slideValue >= Double(index/10) ? Color.yellow : Color.black.opacity(0.4)
     return color
   }
   
   var body: some View {
     VStack(alignment: .leading, spacing: 3) {
       VStack(alignment: .leading, spacing: 3){
+        
+        /// Array Id' are used to set bar color
         ForEach((1...10).reversed(), id:\.self) { index in
           RoundedRectangle(cornerRadius: 2)
             .fill(valueColor(index: Double(index), slideValue: slideValue))
