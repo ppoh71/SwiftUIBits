@@ -4,7 +4,7 @@ Feel free to use, share & comment.
 
 ![Screencast](screencast.gif)
 
-Components so far:
+## Components
 
 ## 1. Custom Toggle
 A very simple and easy to use custom toggle view.
@@ -19,6 +19,9 @@ The @State vars are beeing updates while the Hstack is scrolling what means that
 there is a "Modifying state during view update" conflict. The solution is as often
 GDC which is also as often not the most elegant. If someone has a better solution, please let me know.
 
+## 3. Bar Slider
+This Bar Slider can be used as UI controller to animate values.
+Each bar sets a value to a bindable var that can be used to animate view modifiers like opacity or rotation.
 
 ## Build with
 * Xcode 12.3
