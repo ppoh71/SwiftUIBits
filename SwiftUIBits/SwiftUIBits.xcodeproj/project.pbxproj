@@ -14,6 +14,7 @@
 		A95EC1FF25CC72BA001B6550 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95EC1FE25CC72BA001B6550 /* Utilities.swift */; };
 		A95EC20225CC7321001B6550 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95EC20125CC7321001B6550 /* Extension.swift */; };
 		A95EC20625CC7430001B6550 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95EC20525CC7430001B6550 /* Enums.swift */; };
+		A95EC20925CC79BF001B6550 /* ChangeLog in Resources */ = {isa = PBXBuildFile; fileRef = A95EC20825CC79BF001B6550 /* ChangeLog */; };
 		A974AA0724E3172A00BAD331 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974AA0624E3172A00BAD331 /* AppDelegate.swift */; };
 		A974AA0924E3172A00BAD331 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974AA0824E3172A00BAD331 /* SceneDelegate.swift */; };
 		A974AA0B24E3172A00BAD331 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974AA0A24E3172A00BAD331 /* ContentView.swift */; };
@@ -33,6 +34,7 @@
 		A95EC1FE25CC72BA001B6550 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		A95EC20125CC7321001B6550 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		A95EC20525CC7430001B6550 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		A95EC20825CC79BF001B6550 /* ChangeLog */ = {isa = PBXFileReference; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
 		A974AA0324E3172A00BAD331 /* SwiftUIBits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A974AA0624E3172A00BAD331 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A974AA0824E3172A00BAD331 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		A974AA0524E3172A00BAD331 /* SwiftUIBits */ = {
 			isa = PBXGroup;
 			children = (
+				A95EC20825CC79BF001B6550 /* ChangeLog */,
 				A95EC20425CC741C001B6550 /* Utils */,
 				A974AA0624E3172A00BAD331 /* AppDelegate.swift */,
 				A974AA0824E3172A00BAD331 /* SceneDelegate.swift */,
@@ -187,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A95EC20925CC79BF001B6550 /* ChangeLog in Resources */,
 				A974AA1324E3172D00BAD331 /* LaunchScreen.storyboard in Resources */,
 				A974AA1B24E31D6C00BAD331 /* Colors.xcassets in Resources */,
 				A974AA1024E3172D00BAD331 /* Preview Assets.xcassets in Resources */,
