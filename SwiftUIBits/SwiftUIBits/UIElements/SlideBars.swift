@@ -86,7 +86,8 @@ struct SlideBars: View {
             .fill(valueColor(index: Double(index), slideValue: slideValue))
             .frame(width: 50, height: 10, alignment: .center)
         }
-      }.gesture(
+      }
+      .highPriorityGesture(
         DragGesture(minimumDistance: 10)
           .onChanged { value in
             slideProcess(value: Double(value.location.y))
@@ -95,6 +96,7 @@ struct SlideBars: View {
             self.previousValue = nil
           }
       )
+      
       .onChange(of: initValue, perform: { value in
         self.slideValue = Double(value)
       })

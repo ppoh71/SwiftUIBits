@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ScrollSlider: View {
-  @State private var elementsCount: Int = 2000
+  @State private var elementsCount: Int = 1000
   @State private var firstExecution: Bool = true
   @State private var position: CGFloat = 0
   @State private var deltaMoved: CGFloat = 0
@@ -32,17 +32,17 @@ struct ScrollSlider: View {
     guard isDragging && valuePosition != position else {
       return
     }
-    
+
     /// only when scrolled and position changed
     /// gcd b/c Modifying state during view update
     DispatchQueue.main.async {
       /// get value for left/right scrolling 1/-1
       let newValue: CGFloat = valuePosition > position ? 5 : -5
       scrollExecute(value: Double(newValue))
-      
+
       /// set position value for next scroll execution
       position = valuePosition
-      
+
       /// when need call a function on stopped scrolling
       checkForStoppedScrolling(checkPosition: valuePosition)
     }
@@ -75,7 +75,7 @@ struct ScrollSlider: View {
       Image(systemName: "cube")
         .resizable()
         .foregroundColor(.white)
-        .frame(width: 50, height: 50, alignment: .center)
+        .frame(width: 30, height: 30, alignment: .center)
         .rotationEffect(.degrees(rotationValue))
       
       Spacer().frame(height: 20)
@@ -84,12 +84,12 @@ struct ScrollSlider: View {
         ScrollView(Axis.Set.horizontal, showsIndicators: false) {
           ScrollViewReader { scrollValue in
             HStack(alignment: .bottom, spacing: 15) {
-              
+
               GeometryReader { innerGeo -> Text in
                 valueByScrolling(valuePosition: innerGeo.frame(in: .global).minX)
                 return Text("")
               }
-              
+
               ForEach((1...elementsCount), id:\.self) { index in
                 Rectangle()
                   .fill(Color.white.opacity(0.8))
@@ -99,7 +99,7 @@ struct ScrollSlider: View {
             .onAppear{
               scrollValue.scrollTo(Int(elementsCount/2))
             }
-            
+
             .onChange(of: position, perform: { value in
               /// Snapback when beginning or end is reached
               /// (calculate  end by  elements and spacing)
@@ -107,19 +107,17 @@ struct ScrollSlider: View {
                 scrollValue.scrollTo(Int(elementsCount/2))
               }
             })
+          }.gesture(drag)
+          .onDisappear{
+            self.isDragging = false
           }
         }
-        
+
         Rectangle()
           .fill(Color.white)
           .frame(width: 2, height: 100, alignment: .bottom)
-        
+
       }.frame(height: 100, alignment: .center)
-      
-      .gesture(drag)
-      .onDisappear{
-        self.isDragging = false
-      }
     }
   }
 }
@@ -127,7 +125,7 @@ struct ScrollSlider: View {
 struct ScrollSlider_Previews: PreviewProvider {
   static var previews: some View {
     ScrollSlider()
-      .background(Color.black)
+     .background(Color.black)
     
   }
 }

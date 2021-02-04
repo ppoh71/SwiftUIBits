@@ -11,6 +11,9 @@
 		A9454FB825A63F6C00ADEEB2 /* ScrollSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9454FB725A63F6C00ADEEB2 /* ScrollSlider.swift */; };
 		A9454FBC25A6402900ADEEB2 /* ObserverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9454FBB25A6402900ADEEB2 /* ObserverModel.swift */; };
 		A9454FC225A888E800ADEEB2 /* SlideBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9454FC125A888E800ADEEB2 /* SlideBars.swift */; };
+		A95EC1FF25CC72BA001B6550 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95EC1FE25CC72BA001B6550 /* Utilities.swift */; };
+		A95EC20225CC7321001B6550 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95EC20125CC7321001B6550 /* Extension.swift */; };
+		A95EC20625CC7430001B6550 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95EC20525CC7430001B6550 /* Enums.swift */; };
 		A974AA0724E3172A00BAD331 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974AA0624E3172A00BAD331 /* AppDelegate.swift */; };
 		A974AA0924E3172A00BAD331 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974AA0824E3172A00BAD331 /* SceneDelegate.swift */; };
 		A974AA0B24E3172A00BAD331 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974AA0A24E3172A00BAD331 /* ContentView.swift */; };
@@ -19,6 +22,7 @@
 		A974AA1324E3172D00BAD331 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A974AA1124E3172D00BAD331 /* LaunchScreen.storyboard */; };
 		A974AA1B24E31D6C00BAD331 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A974AA1A24E31D6C00BAD331 /* Colors.xcassets */; };
 		A974AA1D24E3291B00BAD331 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974AA1C24E3291B00BAD331 /* Components.swift */; };
+		A9A1A69925CC6935004D0CAA /* RegisterForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A1A69825CC6935004D0CAA /* RegisterForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,9 @@
 		A9454FB725A63F6C00ADEEB2 /* ScrollSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSlider.swift; sourceTree = "<group>"; };
 		A9454FBB25A6402900ADEEB2 /* ObserverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverModel.swift; sourceTree = "<group>"; };
 		A9454FC125A888E800ADEEB2 /* SlideBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideBars.swift; sourceTree = "<group>"; };
+		A95EC1FE25CC72BA001B6550 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		A95EC20125CC7321001B6550 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		A95EC20525CC7430001B6550 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		A974AA0324E3172A00BAD331 /* SwiftUIBits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A974AA0624E3172A00BAD331 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A974AA0824E3172A00BAD331 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +43,7 @@
 		A974AA1424E3172D00BAD331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A974AA1A24E31D6C00BAD331 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A974AA1C24E3291B00BAD331 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		A9A1A69825CC6935004D0CAA /* RegisterForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 				A9454FB725A63F6C00ADEEB2 /* ScrollSlider.swift */,
 				A974AA1C24E3291B00BAD331 /* Components.swift */,
 				A9454FC125A888E800ADEEB2 /* SlideBars.swift */,
+				A9A1A69825CC6935004D0CAA /* RegisterForm.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -66,6 +75,16 @@
 				A9454FBB25A6402900ADEEB2 /* ObserverModel.swift */,
 			);
 			path = ObserverModel;
+			sourceTree = "<group>";
+		};
+		A95EC20425CC741C001B6550 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A95EC1FE25CC72BA001B6550 /* Utilities.swift */,
+				A95EC20125CC7321001B6550 /* Extension.swift */,
+				A95EC20525CC7430001B6550 /* Enums.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		A974A9FA24E3172A00BAD331 = {
@@ -87,6 +106,7 @@
 		A974AA0524E3172A00BAD331 /* SwiftUIBits */ = {
 			isa = PBXGroup;
 			children = (
+				A95EC20425CC741C001B6550 /* Utils */,
 				A974AA0624E3172A00BAD331 /* AppDelegate.swift */,
 				A974AA0824E3172A00BAD331 /* SceneDelegate.swift */,
 				A974AA0A24E3172A00BAD331 /* ContentView.swift */,
@@ -185,9 +205,13 @@
 				A9454FB825A63F6C00ADEEB2 /* ScrollSlider.swift in Sources */,
 				A974AA1D24E3291B00BAD331 /* Components.swift in Sources */,
 				A9454FC225A888E800ADEEB2 /* SlideBars.swift in Sources */,
+				A95EC20225CC7321001B6550 /* Extension.swift in Sources */,
 				A9454FB525A63F0900ADEEB2 /* CustomToggle.swift in Sources */,
+				A9A1A69925CC6935004D0CAA /* RegisterForm.swift in Sources */,
 				A9454FBC25A6402900ADEEB2 /* ObserverModel.swift in Sources */,
 				A974AA0924E3172A00BAD331 /* SceneDelegate.swift in Sources */,
+				A95EC1FF25CC72BA001B6550 /* Utilities.swift in Sources */,
+				A95EC20625CC7430001B6550 /* Enums.swift in Sources */,
 				A974AA0B24E3172A00BAD331 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
