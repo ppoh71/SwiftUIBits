@@ -45,7 +45,7 @@ struct SlideBars: View {
     
     /// Sets the sliderValue by the delta value depending on touch position and
     /// direction up/down by previous value
-    if value < _previousValue {
+    if value > _previousValue {
       self.slideValue = slideValue >= maxValue ? maxValue : slideValue + deltaValue
     } else {
       self.slideValue = slideValue >= 0 ? slideValue - deltaValue : 0
@@ -71,26 +71,25 @@ struct SlideBars: View {
   ///
   /// - Returns: Bar color
   func valueColor(index: Double, slideValue: Double) -> Color{
-    var color: Color = Color.yellow
-    color = slideValue >= Double(index/10) ? Color.yellow : Color.black.opacity(0.4)
+    var color: Color = Constants.yellow
+    color = slideValue >= Double(index/10) ? Color.yellow : Constants.yellow.opacity(0.2)
     return color
   }
   
   var body: some View {
-    VStack(alignment: .leading, spacing: 3) {
-      VStack(alignment: .leading, spacing: 3){
+      HStack(spacing: 3){
         
         /// Array Id' are used to set bar color
-        ForEach((1...10).reversed(), id:\.self) { index in
+        ForEach((1...10), id:\.self) { index in
           RoundedRectangle(cornerRadius: 2)
             .fill(valueColor(index: Double(index), slideValue: slideValue))
-            .frame(width: 50, height: 10, alignment: .center)
+            .frame(width: 10, height: 20, alignment: .center)
         }
       }
       .highPriorityGesture(
         DragGesture(minimumDistance: 10)
           .onChanged { value in
-            slideProcess(value: Double(value.location.y))
+            slideProcess(value: Double(value.location.x))
           }
           .onEnded { _ in
             self.previousValue = nil
@@ -103,7 +102,6 @@ struct SlideBars: View {
       .onAppear{
         self.slideValue = Double(initValue)
       }
-    }
   }
 }
 

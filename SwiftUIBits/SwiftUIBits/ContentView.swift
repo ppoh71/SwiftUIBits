@@ -13,9 +13,10 @@ struct ContentView: View {
   @State private var activeToggle3: Bool = false
   
   /// Slide Bars
-  @State private var slideBarValue: CGFloat = 1
+  @State private var slideBarValue: CGFloat = 0.7
   
   var body: some View {
+    ScrollView(Axis.Set.vertical, showsIndicators: false) {
     VStack(spacing: 20){
       
       Spacer()
@@ -63,11 +64,26 @@ struct ContentView: View {
         Spacer()
       }
       
-      Spacer().frame(height: 100)
+      VStack{
+        Text("Register Form Example")
+          .font(Font.system(size: 12, weight: .bold))
+          .foregroundColor(Color.gray)
+          .frame(maxWidth: .infinity, alignment: .leading)
+          .padding(20)
+        
+      SubmitButtonShape(title:"Register", valid: .constant(true))
+        .frame(width: 200)
+      }
+      
+     // Spacer().frame(height: 300)
     }
     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
     .background(Color.black)
     .edgesIgnoringSafeArea(.all)
+      
+      
+      
+    }
   }
 }
 

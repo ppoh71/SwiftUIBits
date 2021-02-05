@@ -59,7 +59,7 @@ struct RegisterNewUser: View {
     return password1 == password2 ? true : false
   }
   
-  func validateInputs() -> Bool {
+  func validateAllInputs() -> Bool {
     let validEmail = self.email.isValidEmail()
     let validStrongPassword = Utilities.isValidPassword(password: self.password1)
     let _isValid = validEmail && validStrongPassword != .failed && comparePasswords() ? true : false
@@ -73,37 +73,23 @@ struct RegisterNewUser: View {
         UIApplication.shared.endEditing()
       }
     }
-    
     return _isValid
   }
   
-  /// Stupid Hack for this Problem:
-  /// https://stackoverflow.com/questions/61274607/swiftui-autofill-password
-  /// Add one Char to the password1 so the binding will update the ui, so the field is not empty.
-  ///  Delete the last char again and set again so ui and password are the same again
-  ///
-//  func rebuildPasswordForUpdateUI() {
-//    let t1 = self.password1
-//    let t2 = self.password2
-//    self.password1 = t1 + "#"
-//    self.password2 = t2 + "#"
-//    let passSub1 = self.password1.prefix(self.password1.count - 1)
-//    let passSub2 = self.password2.prefix(self.password2.count - 1)
-//    self.password1 = String(passSub1)
-//    self.password2 = String(passSub2)
-//  }
-  
-
-  
   var body: some View {
-    GeometryReader{ g in
+
       VStack{
+  //      Spacer().frame(height: 10)
+       
+//        Text("Registration Form")
+//          .font(Font.system(size: 18, weight: .bold))
+//          .foregroundColor(Constants.yellow)
+//          .frame(maxWidth: .infinity, alignment: .center)
+//          .padding(20)
+        
+        Spacer().frame(height: 20)
+        
         VStack{
-          
-          Text("\(self.actionObserver.firebaseErrorMessage) ")
-            .font(Font.system(size: 11 , weight: .regular))
-            .foregroundColor(Constants.yellow)
-            .opacity(1)
           
           // MARK: Email
           TextField(Constants.authTextEmail, text: self.$email)
@@ -145,6 +131,7 @@ struct RegisterNewUser: View {
               .foregroundColor( Constants.darkFormColor)
               .opacity(1)
           }
+          
         }
         
         Spacer()
@@ -153,41 +140,29 @@ struct RegisterNewUser: View {
         VStack{
           Button(action: {
             UIApplication.shared.endEditing()
-            //self.rebuildPasswordForUpdateUI()
             
-            if self.validateInputs() {
+            if self.validateAllInputs() {
               
-              self.actionObserver.delegateAuth?.createNewUser(email: self.email, password: self.password1, completion: { (success) in
-                if success{
-                  /// coming from editor
-                  if self.actionObserver.createState == .saveNoUser  {
-                    withAnimation(Animation.easeInOut(duration: 0.6)) {
-                      self.actionObserver.createState = .saveNewStudioForm
-                    }
-                  }
-                }
-              })
             }
           }) {
             
-           // SubmitButtonShape(title:"Register", valid: self.$isValid)
+          SubmitButtonShape(title:"Register", valid: self.$isValid)
           Spacer()
-          }.disabled(!self.validateInputs())
-          //.buttonStyle(ButtonWithoutAnimation())
+          }.disabled(!self.validateAllInputs())
+
         }
       
         Spacer()
-      }
-    }
-    .onAppear{
-      self.actionObserver.firebaseErrorMessage = ""
-    }
+      }.padding(30)
+      .navigationBarTitle("Registration Form")
+
+
   }
 }
 
 struct AddNewUser_Previews: PreviewProvider {
   static var previews: some View {
-    RegisterNewUser().environmentObject(ActionObserverModel())
+    RegisterNewUser().environmentObject(ObserverModel())
       .background(Color.black)
   }
 }

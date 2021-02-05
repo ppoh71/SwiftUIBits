@@ -15,6 +15,9 @@
 		A95EC20225CC7321001B6550 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95EC20125CC7321001B6550 /* Extension.swift */; };
 		A95EC20625CC7430001B6550 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95EC20525CC7430001B6550 /* Enums.swift */; };
 		A95EC20925CC79BF001B6550 /* ChangeLog in Resources */ = {isa = PBXBuildFile; fileRef = A95EC20825CC79BF001B6550 /* ChangeLog */; };
+		A95EC20D25CD77E4001B6550 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95EC20C25CD77E4001B6550 /* Constants.swift */; };
+		A95EC21025CD7895001B6550 /* SwiftUIModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95EC20F25CD7895001B6550 /* SwiftUIModifier.swift */; };
+		A95EC21425CD7931001B6550 /* FormComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95EC21325CD7931001B6550 /* FormComponents.swift */; };
 		A974AA0724E3172A00BAD331 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974AA0624E3172A00BAD331 /* AppDelegate.swift */; };
 		A974AA0924E3172A00BAD331 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974AA0824E3172A00BAD331 /* SceneDelegate.swift */; };
 		A974AA0B24E3172A00BAD331 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974AA0A24E3172A00BAD331 /* ContentView.swift */; };
@@ -35,6 +38,9 @@
 		A95EC20125CC7321001B6550 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		A95EC20525CC7430001B6550 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		A95EC20825CC79BF001B6550 /* ChangeLog */ = {isa = PBXFileReference; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+		A95EC20C25CD77E4001B6550 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A95EC20F25CD7895001B6550 /* SwiftUIModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIModifier.swift; sourceTree = "<group>"; };
+		A95EC21325CD7931001B6550 /* FormComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormComponents.swift; sourceTree = "<group>"; };
 		A974AA0324E3172A00BAD331 /* SwiftUIBits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A974AA0624E3172A00BAD331 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A974AA0824E3172A00BAD331 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,8 +91,18 @@
 				A95EC1FE25CC72BA001B6550 /* Utilities.swift */,
 				A95EC20125CC7321001B6550 /* Extension.swift */,
 				A95EC20525CC7430001B6550 /* Enums.swift */,
+				A95EC20C25CD77E4001B6550 /* Constants.swift */,
+				A95EC20F25CD7895001B6550 /* SwiftUIModifier.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		A95EC21225CD790C001B6550 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A95EC21325CD7931001B6550 /* FormComponents.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		A974A9FA24E3172A00BAD331 = {
@@ -108,6 +124,7 @@
 		A974AA0524E3172A00BAD331 /* SwiftUIBits */ = {
 			isa = PBXGroup;
 			children = (
+				A95EC21225CD790C001B6550 /* UIComponents */,
 				A95EC20825CC79BF001B6550 /* ChangeLog */,
 				A95EC20425CC741C001B6550 /* Utils */,
 				A974AA0624E3172A00BAD331 /* AppDelegate.swift */,
@@ -211,12 +228,15 @@
 				A9454FC225A888E800ADEEB2 /* SlideBars.swift in Sources */,
 				A95EC20225CC7321001B6550 /* Extension.swift in Sources */,
 				A9454FB525A63F0900ADEEB2 /* CustomToggle.swift in Sources */,
+				A95EC21025CD7895001B6550 /* SwiftUIModifier.swift in Sources */,
 				A9A1A69925CC6935004D0CAA /* RegisterForm.swift in Sources */,
+				A95EC20D25CD77E4001B6550 /* Constants.swift in Sources */,
 				A9454FBC25A6402900ADEEB2 /* ObserverModel.swift in Sources */,
 				A974AA0924E3172A00BAD331 /* SceneDelegate.swift in Sources */,
 				A95EC1FF25CC72BA001B6550 /* Utilities.swift in Sources */,
 				A95EC20625CC7430001B6550 /* Enums.swift in Sources */,
 				A974AA0B24E3172A00BAD331 /* ContentView.swift in Sources */,
+				A95EC21425CD7931001B6550 /* FormComponents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
